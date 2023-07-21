@@ -1,0 +1,66 @@
+/*prendo il 100% dalla pagina*/
+html{
+	min-height: 100%;
+	scrollbar-width: none; /* firefox */
+	-ms-overflow-style: none; /* ie 10+ -> tolgo scrollbar da motori di ricerca*/
+}
+
+/*rimuovo la scrollbar*/
+::-webkit-scrollbar {
+	display: none; /* Chrome */
+}
+
+body{
+	margin-bottom: 220px; /* altezza del footer = 300, 20 spazio tra body e footer */
+	background-color: #F5F5F7;
+}
+
+/* con il punto accedo alle classi */
+.navbar {
+	background-color: #313132;
+}
+
+footer {
+	position: absolute; /*fermo il footer sul fondo della pagina*/
+	bottom: 0;
+	width: 100%;
+	height: 200px; /* correlata all'altezza margin-bottom nel body */
+	background-color: #F5F5F7;
+	color: #313132;
+	border-top: 1px solid #D2D2D7; /*inserisco una linea*/
+}
+
+/*media query -> utili ad impostare uno stile diverso in base layout della pagina/ dim. del dispositivo
+metodo 1: carico una certa pagina di stile al verificarsi di una condizione
+
+<link rel = "stylesheet" media = "screen and (min-width: 900px)" href="widescreen.css>
+
+<link rel = "stylesheet" media = "screen and (max-width: 600px)" href="smallscreen.css>
+
+metodo2: vedere sotto
+*/
+
+@media screen and (max-width: 520px) {
+	footer {
+		height: 380px;
+	}
+	body {
+		margin-bottom: 400px;
+	}
+}
+
+footer nav {
+	float: left; /* sposto a sinistra gli elementi */
+	padding: 30px;
+}
+
+footer section {
+	float: left;
+	padding: 30px;
+}
+
+p.copyright {
+	clear: both;
+	margin-left: 30px;
+	margin-bottom: 30px;
+}
